@@ -1,0 +1,16 @@
+Temas e customizações
+* Dracula Official
+* Omni Theme (Rockseat)
+* Omni Owl Theme
+* Material Icon Theme
+* vscode-icons
+
+Verificação ortográfica
+* Code Spell Checker
+* Brazilian Portuguese - Code Spell Checker
+
+Formatadores de código
+* Prettier - Code formatter
+
+Executar o código automaticamente
+* Code Runner
