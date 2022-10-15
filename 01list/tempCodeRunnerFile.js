@@ -1,1 +1,7 @@
-element
+console.log(lista1.indexOf(9))
+console.log(lista1.lastIndexOf(9))
+console.log(lista1.indexOf(100))
+lista1.remove(11)
+lista1.remove(110)
+lista1.print()
+lista1.clear()
