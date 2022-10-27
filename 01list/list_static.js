@@ -14,7 +14,7 @@ function List(length = 10) {
     }
 
     this.isFull = function () {
-        return next == length
+        return next === length
     }
     // Passar um elemento para ser inserido numa posição específica
     this.insertAt = function (element, index) {
