@@ -50,3 +50,19 @@ function Stack(length = 10) {
         console.log(this.toString())
     }
 }
+
+const stack = new Stack(3)
+stack.push('Antonio')
+stack.print()
+stack.push('Israel')
+stack.print()
+stack.push('Iadyla')
+stack.print()
+stack.push('Eduardo')
+stack.pop()
+stack.print()
+stack.pop()
+stack.print()
+stack.pop()
+stack.print()
+stack.pop()

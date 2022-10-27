@@ -1,0 +1,2 @@
+('Iadyla')
+stack.print()
