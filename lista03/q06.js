@@ -58,22 +58,22 @@ function Stack() {
     }
 }
 
-function countPair(stack) {
-    let count = 0
-    while (!stack.isEmpty()) {
-        if (stack.pop() % 2 === 0) {
-            count++
-        }
+function decToAnotherBase(n, base) {
+    const stack = new Stack()
+
+    while (n != 0) {
+        let resto = n % base
+        stack.push(resto)
+        n = Math.floor(n / base)
     }
-
-    return count
+    let bases = '0123456789ABCDEF'
+    let result = ''
+    while (!stack.isEmpty()) {
+        result += bases[stack.pop()]
+    }
+    return result
 }
 
-const stack = new Stack()
-
-for (let i = 0; i < 10; i++) {
-    stack.push(Math.floor(Math.random() * 100))
-}
-stack.print()
-let pares = countPair(stack)
-console.log(`Tinha na pilha ${pares} numeros pares`)
+console.log(decToAnotherBase(255, 16))
+console.log(decToAnotherBase(10, 8))
+console.log(decToAnotherBase(20, 2))

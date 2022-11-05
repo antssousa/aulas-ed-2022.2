@@ -58,22 +58,21 @@ function Stack() {
     }
 }
 
-function countPair(stack) {
-    let count = 0
-    while (!stack.isEmpty()) {
-        if (stack.pop() % 2 === 0) {
-            count++
-        }
+function decToBin(n) {
+    const stack = new Stack()
+
+    while (n != 0) {
+        let resto = n % 2
+        stack.push(resto)
+        n = Math.floor(n / 2)
     }
-
-    return count
+    let bin = ''
+    while (!stack.isEmpty()) {
+        bin += stack.pop()
+    }
+    return bin
 }
 
-const stack = new Stack()
-
-for (let i = 0; i < 10; i++) {
-    stack.push(Math.floor(Math.random() * 100))
-}
-stack.print()
-let pares = countPair(stack)
-console.log(`Tinha na pilha ${pares} numeros pares`)
+console.log(decToBin(255))
+console.log(decToBin(10))
+console.log(decToBin(20))
