@@ -12,6 +12,14 @@ function Queue() {
         return item.shift()
     }
 
+    this.front = function () {
+        return item[0]
+    }
+
+    this.back = function () {
+        return item[item.length - 1]
+    }
+
     // Olhar o primeiro elemento da fila
     // Olhar o último elemento da fila
 
@@ -67,6 +75,7 @@ function Queue() {
 }
 
 const queue = new Queue()
+console.log(queue.back())
 console.log(queue.isEmpty())
 queue.enqueue(1)
 console.log(queue.isEmpty())
@@ -79,6 +88,8 @@ queue.enqueue(4)
 queue.print()
 queue.enqueue(5)
 queue.print()
+console.log('Front: ' + queue.front())
+console.log('Back: ' + queue.back())
 queue.dequeue()
 queue.print()
 queue.dequeue()
